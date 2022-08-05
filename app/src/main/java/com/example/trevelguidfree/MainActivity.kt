@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val buttonExit: Button = findViewById(R.id.button3)
 
         buttonExit.setOnClickListener {
-            finish()
+            finishAffinity()
         }
     }
 }
