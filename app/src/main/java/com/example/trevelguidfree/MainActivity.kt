@@ -33,12 +33,5 @@ class MainActivity : AppCompatActivity() {
             val text = Toast.makeText(this, "Seconds... We open 'More'", Toast.LENGTH_SHORT)
             text.show()
         }
-
-
-        val buttonExit: Button = findViewById(R.id.button3)
-
-        buttonExit.setOnClickListener {
-            finishAffinity()
-        }
     }
 }
