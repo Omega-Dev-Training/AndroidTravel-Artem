@@ -1,4 +1,4 @@
-package com.example.trevelguidfree
+package com.example.trevelaudioguidefree
 
 import org.junit.Test
 

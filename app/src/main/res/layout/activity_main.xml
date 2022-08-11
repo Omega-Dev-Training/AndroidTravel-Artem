@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.trevelguidfree.MainActivity">
 
     <ImageView
         android:id="@+id/imageMain"
@@ -23,7 +23,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="ITALY"
+        android:text="Italy"
+        android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -39,7 +40,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="ROME"
+        android:text="Rome"
+        android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -56,11 +58,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="IS A HiSTORICAL POWERHOUSE"
+        android:text="Is a historical powerhouse"
+        android:textAllCaps="true"
         app:layout_constraintVertical_chainStyle="packed"
         android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="@+id/imageMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
@@ -70,20 +73,21 @@
     <TextView
         android:id="@+id/textLocalTime"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text="Local time"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textAM"
-        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="@+id/textDate"/>
 
     <TextView
         android:id="@+id/textAM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10:23 AM"
+        android:text="10:23 am"
+        android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -105,140 +109,95 @@
     <TextView
         android:id="@+id/textToday"
         android:layout_width="wrap_content"
-        android:layout_height="22dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
-        android:text="TODAY"
+        android:text="Today"
+        android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/text2C"
+        app:layout_constraintEnd_toEndOf="@+id/textScatteredCloud" />
 
     <TextView
         android:id="@+id/text2C"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text="-2ºC"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textScatteredCloud"
         app:layout_constraintTop_toBottomOf="@+id/textToday" />
 
     <TextView
         android:id="@+id/textScatteredCloud"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text="Scattered cloud"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text2C"/>
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageMain"
+        app:layout_constraintTop_toBottomOf="@+id/text2C"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonAttractions"
         android:layout_width="0dp"
-        android:layout_height=""
-        android:background="@color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNeedToKnow"
-        app:layout_constraintTop_toBottomOf="@+id/imageMain"/>
-
-    <ImageView
-        android:id="@+id/imageAttractions"
-        android:layout_width="40dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/buttonAttractions"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/buttonAttractions"
-        app:layout_constraintTop_toTopOf="@+id/buttonAttractions"
-        app:srcCompat="@drawable/location" />
-
-    <TextView
-        android:id="@+id/textAttractions"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
         android:text="Attractions"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
         android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonAttractions"
-        app:layout_constraintEnd_toEndOf="@+id/buttonAttractions"
-        app:layout_constraintStart_toStartOf="@+id/buttonAttractions"
-        app:layout_constraintTop_toTopOf="@+id/buttonAttractions" />
+        app:icon="@drawable/location"
+        app:iconSize="25sp"
+        app:iconGravity="textTop"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNeedToKnow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonNeedToKnow"/>
 
-    <Button
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonNeedToKnow"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/transparent"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="Need to know"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:icon="@drawable/xmlid_205"
+        app:iconGravity="textTop"
+        app:iconTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonMore"
-        app:layout_constraintTop_toBottomOf="@+id/imageMain"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonAttractions" />
+        app:layout_constraintStart_toEndOf="@+id/buttonAttractions"
+        app:layout_constraintTop_toBottomOf="@+id/imageMain"/>
 
-    <ImageView
-        android:id="@+id/imageNeedToKnow"
-        android:layout_width="40dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/buttonNeedToKnow"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/buttonNeedToKnow"
-        app:layout_constraintTop_toTopOf="@+id/buttonNeedToKnow"
-        app:srcCompat="@drawable/xmlid_205" />
-
-    <TextView
-        android:id="@+id/textNeedToKnow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Need To Know"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonNeedToKnow"
-        app:layout_constraintEnd_toEndOf="@+id/buttonNeedToKnow"
-        app:layout_constraintStart_toStartOf="@+id/buttonNeedToKnow"
-        app:layout_constraintTop_toTopOf="@+id/buttonNeedToKnow" />
-
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonMore"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/transparent"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="More"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:icon="@drawable/xmlid_943"
+        app:iconGravity="textTop"
+        app:iconTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonNeedToKnow"
-        app:layout_constraintTop_toBottomOf="@+id/imageMain"/>
-
-    <ImageView
-        android:id="@+id/imageMore"
-        android:layout_width="40dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/buttonMore"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/buttonMore"
-        app:layout_constraintTop_toTopOf="@+id/buttonMore"
-        app:srcCompat="@drawable/xmlid_943" />
-
-    <TextView
-        android:id="@+id/textMore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="More"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonMore"
-        app:layout_constraintEnd_toEndOf="@+id/buttonMore"
-        app:layout_constraintStart_toStartOf="@+id/buttonMore"
-        app:layout_constraintTop_toTopOf="@+id/buttonMore" />
+        app:layout_constraintTop_toTopOf="@+id/buttonNeedToKnow"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
